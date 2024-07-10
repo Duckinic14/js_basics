@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+	 <title>Example Page</title>
+</head>
+<body>
+     <h1 id="greeting">Hello World!</h1>
+	 <p id="info">How are you doing?</p>
+	 <p id="datetime"></p>
+	 
+	 <script>
+	        // add alert and prompt
+			alert("Hello world!"); // popup
+			let name = prompt("Enter your name:");
+			if (name) {
+			    alert("Hello " + name + "!!!");
+				document.getElementById("greeting").textContent = "Hello " + name;
+				}
+			else {
+			    alert("Are your nameless???!!!");
+				document.getElementById("greeting").textContent = "Hello nameless dude"
+				}
+				
+			// prompt for other information
+			let bday = prompt("Hey, " + name + " What's your birthday? in dd/mm/yy")
+			document.getElementById("datetime").textContent = "Woah, it's" + bday + " " + name + "!!!";
+				
+			//get current date and time
+			let now = new Date();				let dateStr = now.toLocalDateString();
+		    let timeStr = now.toLocalTimeString();
+			document.getElementById("datetime").innerHTML = "Date: <b>" + dateStr + "</b><br>";
+			document.getElementById("datetime").innerHTML = "Time: <b>" + timeStr + "</b><br>";
+				
+				
+				
+				
+	 </script>
+	 
+</body>
+</html>
